@@ -1,7 +1,7 @@
 # Data Analytics-Power BI-Report814
 
 ## Data Loading
-### Orders Table
+#### Orders Table
 This table has been loaded through Azure SQL Database. The Order Date and Shipping Date columns have been divided into individual Date and Time columns.
 In order to preserve data integrity, any rows with null or missing values in the new Date column have been eliminated.
 Additionally, for the sake of data privacy, the Card Number column has also been removed. The columns have been renamed to align with Power BI's naming conventions.
