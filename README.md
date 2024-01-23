@@ -53,7 +53,8 @@ Revenue YTD = CALCULATE (TOTALYTD (SUMX (FILTER (Orders,Orders[Order Date] <= MA
 Two hierarchies have been established: Year and Geography. This allows for the ability to delve deeper into the data and conduct
 ![image](https://github.com/awwal85/data-analytics-power-bi-report814/assets/114372396/a072535f-1d08-441e-84fb-8db87c758e2d)
 ![image](https://github.com/awwal85/data-analytics-power-bi-report814/assets/114372396/f1f21506-56a5-4761-bd9e-dfa3af26ed7f)
- detailed analysis in our report.
+
+detailed analysis in our report.
 
 
 
