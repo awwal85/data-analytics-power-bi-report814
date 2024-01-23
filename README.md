@@ -22,3 +22,10 @@ The initial file was in zip format, which I then extracted and accessed through 
 Additionally, I merged the first name and last name columns to generate a full name column.
 Furthermore, the columns have been renamed to adhere to Power BI's standard naming conventions.
 
+## Creating Data Model
+#### Date Models
+The Date Table serves as a continuously updated timeline, providing the necessary framework for implementing time-efficient functions in subsequent analyses.
+
+#### Star Schema Data Model
+These are one-to-many relationships where the active relationship is between orders and the Date Table, specifically through [Order Date] and [Date].
+![image](https://github.com/awwal85/data-analytics-power-bi-report814/assets/114372396/ed64a49c-4410-4c07-864a-abc7d80970d7)
