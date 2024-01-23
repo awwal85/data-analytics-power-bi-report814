@@ -33,12 +33,19 @@ These are one-to-many relationships where the active relationship is between ord
 
 #### Measures Table
 The measures table contains the primary metrics used for the data analysis and reporting. Each of the following DAX formulas were utilized in obtaining these measures.
+
 Total Orders = COUNT(Orders[Product Code])
+
 Total Revenue = SUMX(Orders,Orders[Product Quantity] * RELATED(Products[Sale Price]))
+
 Total Profit = SUMX(Orders, Orders[Product Quantity] * (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price])))
+
 Total Customers = DISTINCTCOUNT(Orders[User ID])
+
 Total Quantity = COUNT(Orders[Product Quantity])
+
 Profit YTD = TOTALYTD(SUMX(Orders, Orders[Product Quantity] * (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price]))), 'Date Table'[Date])
+
 Revenue YTD = CALCULATE (TOTALYTD (SUMX (FILTER (Orders,Orders[Order Date] <= MAX ( 'Date Table'[Date])),
                               Orders[Product Quantity] * RELATED ( Products[Sale Price] )),
                         'Date Table'[Date]))
