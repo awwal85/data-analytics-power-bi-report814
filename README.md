@@ -97,15 +97,10 @@ The queries serve as the answers to the five business insight enquiries.
 
 1. How many staff are there in all of the UK stores?
    
-   SELECT
+   SELECT SUM(staff_numbers)
    
-     SUM(staff_numbers)
+   FROM dim_store
    
-   FROM
-   
-     dim_store
-   
-
 3.  Which month in 2022 has had the highest revenue?
 
    
