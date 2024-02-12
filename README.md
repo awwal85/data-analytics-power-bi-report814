@@ -100,22 +100,24 @@ The queries serve as the answers to the five business insight enquiries.
    SELECT SUM(staff_numbers)
    
    FROM dim_store
-   
-3.  Which month in 2022 has had the highest revenue?
-   
-    SELECT review.month_name, orders.total_orders, dim_date.year 
 
-    FROM forview, orders, dim_date
+   
+2.  Which month in 2022 has had the highest revenue?
+   
+    SELECT  dim_date.month_name:: text,  orders.total_orders, dim_date.year 
+
+    FROM  orders, dim_date
 
     WHERE dim_date.year::text LIKE '%22'
 
-    GROUP BY month_name
+    GROUP BY month_name::text, total_orders, dim_date.year
 
-    ORDER BY total_orders DESC
+    ORDER BY month_name::text, total_orders DESC
 
-    LIMIT 1; 
+    LIMIT 1;
+
    
-4.  
+3.  
 
 
 
