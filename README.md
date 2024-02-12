@@ -56,6 +56,14 @@ Two hierarchies have been established: Year and Geography. This allows for the a
 ![image](https://github.com/awwal85/data-analytics-power-bi-report814/assets/114372396/f1f21506-56a5-4761-bd9e-dfa3af26ed7f)
 ![image](https://github.com/awwal85/data-analytics-power-bi-report814/assets/114372396/a072535f-1d08-441e-84fb-8db87c758e2d)
 
+## Reports
+The report consists of six comprehensive pages, each dedicated to providing detailed information on our customers, products, and stores. 
+Additionally, it includes an Executive Summary and a Stores Drillthrough and Toltip pages, which offers further insight into our various store locations for an enhanced understanding of our business.
 
+#### Customer Detail page
+In order to get a quick understanding of our customer base, I have developed card visuals that showcase unique customers and their corresponding revenue, as well as the number of orders and revenue for our top customer. The line chart and bar charts provide a comprehensive look into the impact of our products on past customer behaviour. Additionally, a donut chart has been utilized to highlight which regions yield the highest sales. Furthermore, a table has been generated outlining the top 10 customers based on revenue.
+
+#### Product Detail page
+This page offers an overview of our product performance. The report includes three (3) gauges illustrating the current quarter's orders, revenue, and profit in comparison to their respective targets. Additionally, a table featuring the top 10 current products and a scatter plot displaying each product's contribution to company profit have been included. A line chart has also been utilized to depict the trend of our target revenue over the years.
 
 
