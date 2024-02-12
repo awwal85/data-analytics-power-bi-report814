@@ -102,7 +102,18 @@ The queries serve as the answers to the five business insight enquiries.
    FROM dim_store
    
 3.  Which month in 2022 has had the highest revenue?
+   
+    SELECT review.month_name, orders.total_orders, dim_date.year 
 
+    FROM forview, orders, dim_date
+
+    WHERE dim_date.year::text LIKE '%22'
+
+    GROUP BY month_name
+
+    ORDER BY total_orders DESC
+
+    LIMIT 1; 
    
 4.  
 
