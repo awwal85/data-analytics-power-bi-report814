@@ -88,18 +88,24 @@ This page features a card visual showcasing store locations, accompanied by gaug
 #### Stores Tooltip
 To ensure our users have a thorough understanding of each store's year-to-date profit performance in relation to the set target, I have implemented a personalized tooltip feature using the profit gauge visual. This means that when hovering over any location, the tool will display both the YTD profit and its corresponding target.
 
+## SQL Queries
+#### Connection to data
+The data was stored on a Postgres database hosted on Microsoft Azure. As such, I connected to it using code in VS Code.
 
+#### Queries and database
+The queries serve as the answers to the five business insight enquiries.
 
+1. How many staff are there in all of the UK stores?
+   
+   SELECT 
+     SUM(staff_numbers)
+   FROM
+     dim_store
 
+3.  Which month in 2022 has had the highest revenue?
 
-
-
-
-
-
-
-
-
+   
+4.  
 
 
 
