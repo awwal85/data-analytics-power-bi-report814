@@ -60,10 +60,33 @@ Two hierarchies have been established: Year and Geography. This allows for the a
 The report consists of six comprehensive pages, each dedicated to providing detailed information on our customers, products, and stores. 
 Additionally, it includes an Executive Summary and a Stores Drillthrough and Toltip pages, which offers further insight into our various store locations for an enhanced understanding of our business.
 
-#### Customer Detail page
+#### Customer Detail 
 In order to get a quick understanding of our customer base, I have developed card visuals that showcase unique customers and their corresponding revenue, as well as the number of orders and revenue for our top customer. The line chart and bar charts provide a comprehensive look into the impact of our products on past customer behaviour. Additionally, a donut chart has been utilized to highlight which regions yield the highest sales. Furthermore, a table has been generated outlining the top 10 customers based on revenue.
 
-#### Product Detail page
+#### Product Detail 
 This page offers an overview of our product performance. The report includes three (3) gauges illustrating the current quarter's orders, revenue, and profit in comparison to their respective targets. Additionally, a table featuring the top 10 current products and a scatter plot displaying each product's contribution to company profit have been included. A line chart has also been utilized to depict the trend of our target revenue over the years.
+
+#### Stores Map
+The Stores map page displays the year-to-date profit for all of our business locations. This feature includes a country slicer, allowing for easy access to specific store performance in any location.
+
+#### Stores Drillthrough
+This page features a card visual showcasing store locations, accompanied by gauges displaying profit and revenue YTD alongside their corresponding targets. This allows for a simple comparison of each location's performance against its targets in terms of profit and revenue. Additionally, the column chart provides insights into customer purchasing patterns across different locations. For further insight, the table highlights the top five highest-earning products based on revenue.
+
+#### Stores Tooltip
+To ensure our users have a thorough understanding of each store's year-to-date profit performance in relation to the set target, I have implemented a personalized tooltip feature using the profit gauge visual. This means that when hovering over any location, the tool will display both the YTD profit and its corresponding target.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
