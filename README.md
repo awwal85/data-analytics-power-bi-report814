@@ -95,14 +95,15 @@ The data was stored on a Postgres database hosted on Microsoft Azure. As such, I
 #### Queries and database
 The queries serve as the answers to the five business insight enquiries.
 
-1. How many staff are there in all of the UK stores?
+1. #### How many staff are there in all of the UK stores?
    
    SELECT SUM(staff_numbers)
    
    FROM dim_store
+   #### Answer: 20780
 
    
-2.  Which month in 2022 has had the highest revenue?
+3.  #### Which month in 2022 has had the highest revenue?
    
     SELECT  dim_date.month_name:: text,  orders.total_orders, dim_date.year 
 
@@ -115,9 +116,46 @@ The queries serve as the answers to the five business insight enquiries.
     ORDER BY month_name::text, total_orders DESC
 
     LIMIT 1;
+    #### Answer: April
+    
 
    
-3.  
+4. #### Which German store type had the highest revenue for 2022?
+   
+   SELECT orders.store_code::text, orders.total_orders, country_region.country::text, dim_date.year 
 
+   FROM orders, country_region, dim_date
 
+   WHERE dim_date.year::text LIKE '%22' AND country::text LIKE 'Ge%'
 
+   GROUP BY country::text, store_code::text, total_orders, dim_date.year
+
+   ORDER BY country::text, total_orders DESC
+
+   LIMIT 1;
+   #### Answer:
+   
+   
+6. #### Create a view where the rows are the store types and the columns are the total sales, percentage of total sales and the count of orders
+   
+   SELECT orders.total_orders, forview.percentage_of_sales, test_store_overviews_2.totalled_sales, forquerying2.store_type
+
+   FROM orders, forview, test_store_overviews_2, forquerying2
+
+   GROUP BY total_orders, percentage_of_sales, store_type
+   #### Answer:
+   
+   
+8. ####  Which product category generated the most profit for the "Wiltshire, UK" region in 2021?
+   SELECT forview.category, test_store_overviews_2.totalled_sales, forview.full_region::text, dim_date.year 
+
+   FROM test_store_overviews_2, orders, forview, dim_date
+    
+   WHERE dim_date.year::text LIKE '%21' AND full_region LIKE 'Wiltshire, UK'
+
+   GROUP BY category, full_region::text, dim_date.year, totalled_sales, total_orders
+
+   ORDER BY total_orders DESC
+
+   LIMIT 1;
+   #### Answer:
