@@ -4,7 +4,7 @@
 #### Orders Table
 This table has been loaded through Azure SQL Database. The Order Date and Shipping Date columns have been divided into individual Date and Time columns.
 In order to preserve data integrity, any rows with null or missing values in the new Date column have been eliminated.
-Additionally, for the sake of data privacy, the Card Number column has also been removed. The columns have been renamed to align with Power BI's naming conventions.
+Also, for the sake of data privacy, the Card Number column has also been removed. The columns have been renamed to align with Power BI's naming conventions.
 
 #### Product Table
 This is a comma-separated values (CSV) file, which can be loaded using the CSV/text icon located on the home tab.
